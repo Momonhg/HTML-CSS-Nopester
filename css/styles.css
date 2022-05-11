@@ -1,21 +1,20 @@
+body{
+  text-align: center;
+  line-height: 1.5;
+}
+
 h1 {
   font: "Montserrat-black";
   font-size: 3rem;
-  line-height: 1.5;
   color: #fff;
 }
+/* NOTE: combine selector with , */
 
-h2 {
+h2, h3 {
 font: "Montserrat-bold";
 font-size: 2rem;
-line-height: 1.5;
 }
 
-
-h3{
-  font: "Montserrat-bold";
-  font-size: 1.5rem;
-}
 
 i {
   color: #FFBBBB;
@@ -23,14 +22,21 @@ i {
 
 
 /****title***/
+.pink-background {
+  background-color: #F68989;
+
+}
+
 
 #title{
-  background-color: #F68989;
+  text-align: left;
 }
 
-.container-fluid {
-  padding: 3% 15%;
+
+#title .container-fluid {
+  padding: 3% 15% 7%;
 }
+
 .navbar-brand {
   font-family: "Ubuntu", sans-serif;
 }
@@ -39,8 +45,15 @@ i {
   margin: 5% 3% 5% 0;
 }
 
-.title-image{
-  width: 45%;
+
+
+.title-image {
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  left: 15%;
+  padding: 20px 0 0 0;
+
 }
 
 
@@ -48,15 +61,39 @@ i {
 /*****features***/
 #features {
   padding: 7% 15%;
+  position: relative;
 
 }
 
-.row{
-  color: #362222;
+/* NOTE: combine selector by read as h3 and p in the div (container* name) or
+div id= a class= b ----> container 1
+div class = c  -----> container 2
+h1----> selector container 3 /h1
+/div
+/div
+
+-> to modify specific to container 2
+->> .b(space) .c {}
+in case of no space like below meant only apply to the elements has both class b and c in the class
+--->(div class=b c)
+---->.b.c
+
+or with id  #id (target id place like a container and stuff) .tag (a specific class in the id want to change)
+---> #a .c
+
+or a class need to modify in a specific id
+-----> .c #a
+
+Selector in a specific container or id (need to add id or specific class which is unique)
+----> h1.b or h1#a or .b h1
+
+
+  */
+.row-feature h3, .row-feature p{
+  color: #461111;
 }
 
 .feature-box {
-  text-align: center;
   padding: 5%;
 }
 
@@ -71,39 +108,25 @@ i {
 
 /***testomonial***/
 #testimonials {
-text-align: center;
 background-color: #F68989;
 color: #fff;
 }
 
-.testimonial-text{
-color: #fff;
-
-}
 .carousel-item {
   padding: 7% 15%;
-
 }
 
 
-.testimonial-image-one {
+.testimonial-image {
   width: 10%; /*****the size of image***/
   border-radius: 100%; /****border line of image***/
   margin: 15px; /**space between***/
 
 }
 
-.testimonial-image-two {
-  width: 10%;
-  border-radius: 100%;
-  margin: 15px;
-
-}
-
 /****press***/
 #press{
   background-color: #F68989;
-  text-align: center;
   padding: 3%;
 }
 .logo{
@@ -115,46 +138,35 @@ color: #fff;
 /****Pricing***/
 #pricing {
   color: #F68989;
-  text-align: center;
   padding: 100px;
 }
 
 .pricing-name{
-  color: #362222;
   font-size: 2rem;
   margin: 20px 10px;
 }
-.pricing-column{
+.pricing-column, .pricing-container{
   padding: 3% 2%;
-}
-.pricing-container{
-  padding: 3% 5%;
 }
 
 /*** cta***/
 #cta {
   margin: 20px 0 0 0;
   padding: 7% 15%;
-  text-align: center;
-  line-height: 1.5;
   background-color: #F68989;
   color: #fff;
 }
 
-.cta-heading{
-  font: Montserrat-black;
+.cta-heading {
   font-size: 3.5rem;
-  line-height: 1.5;
 
 }
 /***footer***/
 #footer{
-  text-align: center;
   color: #F68989;
-  line-height: 1.5;
   padding: 7% 15%;
 }
 
-.footer-icon {
+#footer .icon {
   margin: 20px 10px;
 }
